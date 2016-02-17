@@ -1,0 +1,13 @@
+<div class="bus-card" ng-click="$parent.goTo('addPassengers', this.currentBus)">
+    <div class="top">
+        <h3 ng-bind="currentBus.owner.lastName + '\'s bus'"></h3>
+        <img ng-show="currentBus.hasAc"
+             class="ac-image"
+             src="http://www.wpclipart.com/household/odds_and_ends/fans/ceiling_fan_blue.png">
+    </div>
+    <hr>
+    <div class="mid">
+        <span ng-bind="'Horsepower: ' + currentBus.hp"></span>
+        <span ng-bind="'Seats taken: ' + currentBus.passengers.length + '/' + currentBus.capacity"></span>
+    </div>
+</div>

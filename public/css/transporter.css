@@ -1,0 +1,190 @@
+header{
+    font-family:Pacifico;
+    text-align: center;
+    width:100%;
+    height:auto;
+    position:fixed;
+    z-index:5;
+    background-color:#e3e3e3;
+    box-shadow: 3px 3px 10px #9d9d9d;
+}
+header h2{
+    font-size:30px;
+}
+.navi-options{
+    background-color:#428bca;
+    color:#e3e3e3;
+    height:50px;
+}
+.navi-options span{
+    margin: 12.5px 12.5px 12.5px 12.5px;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 18px;
+}
+.navi-options div{
+    width: 200px;
+    display: inline-block;
+    margin-left: 20px;
+    margin-right:20px;
+    position:relative;
+}
+.navi-options span:hover{
+    text-shadow: 0 0 10px #e3e3e3;
+}
+.navi-options span:active{
+    text-shadow: 0 0 15px #e3e3e3
+}
+.view-container{
+    padding:20px;
+    /*background-color:#e3e3e3;*/
+    width:90%;
+    height:70%;
+    position:relative;
+    left:5%;
+    right:15%;
+    top:120px;
+
+}
+.bus-card{
+    height:50%;
+    width: 100%;
+    background-color:white;
+    box-shadow: 3px 3px 10px #9d9d9d;
+    padding:20px;
+    margin-bottom: 10px;
+    font-family: Pacifico;
+    cursor: pointer;
+}
+.bus-card .img{
+    height:35px;
+    padding:5px;
+    float:right;
+}
+.bus-card .top h3{
+    margin:0;
+    display:inline;
+}
+.bus-card:active{
+    box-shadow: 2px 2px 9px #9d9d9d;
+}
+.card-details{
+    display:inline-block;
+}
+.bus-card span{
+    display:block;
+    font-size:15px;
+    font-weigth:bold;
+    font-family: 'Pacifico';
+}
+.ac-image{
+    height: 30px;
+    float:right;
+}
+.navigation span{
+    font-family: Pacifico;
+}
+.add-bus-section{
+    font-family: Pacifico;
+    max-width:60%;
+    position:relative;
+    left:35%;
+    right:15%;
+    top:-45px;
+}
+.add-bus-section input{
+    display:block;
+    width:50%;
+    left:25%;
+    light:25%;
+    margin:10px;
+}
+.add-bus-section h2{
+    margin-top:50px;
+    text-align: center;
+    position:relative;
+    right:25%;
+}
+.add-bus-section button{
+    display:block;
+    margin-top:10px;
+}
+.add-bus-section .color span{
+    display:inline;
+}
+
+.add-bus-section .color select{
+    display:inline;
+    margin-left:10px;
+}
+.add-bus-section .color{
+    margin-bottom: 10px;
+}
+.add-bus-section .has-ac{
+    margin-bottom: 10px;
+}
+.add-bus-section .has-ac span{
+    display:inline;
+}
+.add-bus-section .has-ac input{
+    display:inline;
+    margin-left: -190px;
+}
+/*.add-bus-section .inline-needed{*/
+    /*display:inline;*/
+/*}*/
+.add-bus-section span{
+    display: block;
+}
+.add-passengers{
+    font-family:Pacifico;
+}
+.add-passengers .right input{
+    margin:5px;
+    display:block;
+}
+.add-passengers .right button{
+    margin:5px;
+    display: block;
+}
+.add-passengers .right select{
+    margin:5px;
+    display: block;
+}
+.add-passengers .left img{
+    height:10px;
+    /*margin: 0 5px 0 10px;*/
+    margin: -5px 0 0 10px;
+    cursor: pointer;
+}
+.add-passengers .left .passengers{
+    margin-bottom: 10px;
+}
+
+.home-section{
+    font-family:Pacifico;
+}
+.home-section h3{
+    text-align: center;
+}
+.counter-balloon{
+    background-color: red;
+    color: white;
+    font-family:Pacifico;
+    width:30px;
+    height:30px;
+    border-radius:20px;
+    display:inline-block;
+    margin: 0;
+}
+#counter{
+    margin: 0;
+    position: absolute;
+    left:75%;
+    top:-18%;
+    cursor: default;
+    z-index:4;
+}
+.ng-cloak{
+    display: none; !important;
+}

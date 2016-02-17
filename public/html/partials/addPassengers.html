@@ -1,0 +1,39 @@
+ <div class="add-passengers">
+     <div class="left col-md-6">
+         <h2 ng-show="currentBus.passengers.length">Embarked passengers: </h2>
+         <h2 ng-show="!currentBus.passengers.length">No passengers </h2>
+
+         <div class="passengers"
+              ng-show="currentBus.passengers.length">
+             <div ng-repeat="passenger in currentBus.passengers"
+                  ng-mouseover="passenger.showErase = true"
+                  ng-mouseleave="passenger.showErase = false">
+                 <span ng-bind="passenger.firstName + ' ' + passenger.lastName"></span>
+                 <img ng-show="passenger.showErase"
+                      src="../../resources/niBBgeaxT.png"
+                      ng-click="removePassenger(passenger.id, currentBus.id)">
+             </div>
+         </div>
+     </div>
+     <!--DIRECTIVE with CONTROLLER and input ATTRIBUTE linked to it-->
+     <!--<div>-->
+         <!--<h3>Directive time!</h3>-->
+         <!--<div ng-repeat="passenger in currentBus.passengers">-->
+             <!--<passenger-card current-pass-attr="passenger"></passenger-card>-->
+         <!--</div>-->
+     <!--</div>-->
+     <div class="right col-md-6">
+         <h2 ng-bind="currentBus.owner.lastName + '\'s bus'"></h2>
+         <form name="passengerForm">
+             <h3>Add passengers to bus</h3>
+             <input ng-model="firstName" type="text" placeholder="First Name" required>
+             <input ng-model="lastName" type="text" placeholder="Last Name" required>
+             <select ng-model="gender" required>
+                 <option>Male</option>
+                 <option>Female</option>
+             </select>
+             <input ng-model="age" type="text" placeholder="Age" required>
+             <button ng-disabled="passengerForm.$invalid" ng-click="addPassenger()">Add passenger</button>
+         </form>
+     </div>
+ </div>

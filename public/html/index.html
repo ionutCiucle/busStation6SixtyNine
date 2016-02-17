@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Station '69</title>
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/transporter.css">
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Allerta+Stencil' rel='stylesheet' type='text/css'>
+</head>
+<body ng-app="busStation">
+<header ng-controller="MainController">
+    <h2>Station '69</h2>
+    <div class="navi-options">
+        <div>
+            <span ui-sref="home"
+                  ng-click="loadView('home')"
+            >
+                Home
+            </span>
+        </div>
+        <div>
+            <span ui-sref="buses" ng-click="loadView('buses')">Available Buses</span>
+            <span ng-show="currentState !== 'buses' && busCounter"
+                  ng-bind="busCounter"
+                  id="counter"
+                  class="counter-balloon ng-cloak"
+            >
+            </span>
+        </div>
+        <div>
+            <span ui-sref="addBus"
+                  ng-click="loadView('addBus')"
+            >
+                Add Your Bus
+            </span>
+        </div>
+    </div>
+</header>
+<div class="view-container">
+    <section ui-view></section>
+</div>
+<script src="../bower_components/angular/angular.min.js"></script>
+<script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="https://cdn.socket.io/socket.io-1.3.5.js"></script>
+<script src="../js/modules/socketIO.js"></script>
+<!--<script src="../bower_components/angular-socket-io/socket.min.js"></script>-->
+<script src="../js/modules/passenger.js"></script>
+<script src="../js/modules/bus.js"></script>
+<script src="../js/controllers/busStation.js"></script>
+</body>
+</html>

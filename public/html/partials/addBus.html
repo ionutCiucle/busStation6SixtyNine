@@ -1,0 +1,21 @@
+<div class="add-bus-section">
+    <form name="busForm">
+        <h2>Add Bus</h2>
+        <span>Owner details</span>
+        <input type="text" placeholder="First Name" ng-model="firstName" required>
+        <input type="text" placeholder="Last Name" ng-model="lastName" required>
+        <span>Bus details</span>
+        <input type="text" placeholder="Engine Capacity" ng-model="capacity" required>
+        <input type="text" placeholder="Horsepower" ng-model="hp" required>
+        <div class="has-ac">
+            <span class="inline-needed">Has AC</span>
+            <input type="checkbox" class="inline-needed" ng-model="hasAc">
+        </div>
+        <div class="color">
+            <span>Color</span>
+            <select ng-init="color = availableColors[0]" ng-options="color.label for color in availableColors" ng-model="color" ></select>
+        </div>
+        <button ng-disabled="busForm.$invalid" ng-click="addBus()">Commit</button>
+        <!--<button ng-click="addBus()>Commit</button>-->
+    </form>
+</div>
